@@ -33,5 +33,31 @@ registroForm.addEventListener('submit', function(event) {
     // Restablecer el estado de edición
     filaEditada = null;
 
+  } else {
+    // Crear una nueva fila en la tabla con los datos ingresados
+    const fila = document.createElement('tr');
+    fila.innerHTML = `
+      <td>${rut}</td>
+      <td>${nombre}</td>
+      <td>${apellidoPaterno}</td>
+      <td>${apellidoMaterno}</td>
+      <td>${correo}</td>
+      <td>${telefono}</td>
+      <td>
+        <button class="btn btn-primary btn-sm editar">Editar</button>
+        <button class="btn btn-danger btn-sm eliminar">Eliminar</button>
+      </td>
+    `;
+
+    // Agregar la fila a la tabla
+    tablaUsuarios.querySelector('tbody').appendChild(fila);
+  }
+
+  // Limpiar los campos del formulario
+  registroForm.reset();
+});
+
+
+
   
 
