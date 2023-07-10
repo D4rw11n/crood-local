@@ -32,7 +32,6 @@ registroForm.addEventListener('submit', function(event) {
 
     // Restablecer el estado de edición
     filaEditada = null;
-
   } else {
     // Crear una nueva fila en la tabla con los datos ingresados
     const fila = document.createElement('tr');
@@ -56,34 +55,7 @@ registroForm.addEventListener('submit', function(event) {
   // Limpiar los campos del formulario
   registroForm.reset();
 });
-
-
-// Manejar el evento de clic en el botón de eliminar o editar
-tablaUsuarios.addEventListener('click', function(event) {
-  if (event.target.classList.contains('eliminar')) {
-    event.target.closest('tr').remove();
-  } else if (event.target.classList.contains('editar')) {
-    const fila = event.target.closest('tr');
-    filaEditada = fila;
-
-    // Obtener los valores de la fila para rellenar el formulario de edición
-    const rut = fila.cells[0].textContent;
-    const nombre = fila.cells[1].textContent;
-    const apellidoPaterno = fila.cells[2].textContent;
-    const apellidoMaterno = fila.cells[3].textContent;
-    const correo = fila.cells[4].textContent;
-    const telefono = fila.cells[5].textContent;
-
-    // Rellenar el formulario de edición con los valores de la fila
-    document.getElementById('rut').value = rut;
-    document.getElementById('nombre').value = nombre;
-    document.getElementById('apellidoPaterno').value = apellidoPaterno;
-    document.getElementById('apellidoMaterno').value = apellidoMaterno;
-    document.getElementById('correo').value = correo;
-    document.getElementById('telefono').value = telefono;
-  }
-});
-
+ 	
 
   
 
