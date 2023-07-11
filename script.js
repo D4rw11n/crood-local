@@ -32,7 +32,6 @@ registroForm.addEventListener('submit', function(event) {
 
     // Restablecer el estado de edición
     filaEditada = null;
-
   } else {
     // Crear una nueva fila en la tabla con los datos ingresados
     const fila = document.createElement('tr');
@@ -56,8 +55,7 @@ registroForm.addEventListener('submit', function(event) {
   // Limpiar los campos del formulario
   registroForm.reset();
 });
-
-
+ 	
 
   
 
